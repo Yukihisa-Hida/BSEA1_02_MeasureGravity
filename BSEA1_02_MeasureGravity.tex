@@ -62,7 +62,7 @@
 式(\ref{equ:G-from-T-1})中の$h$を4桁の精度で求めるためには, 振り子の長さを不確かさ$1\,\mathrm{mm}$以内で測る必要があるが, これは容易である.
 それに対して, 式(\ref{equ:G-from-T-1})中の$T^2$を4桁の精度で求めるためには, 30周期をストップウォッチで測る場合には時間測定の不確かさを0.06秒以内, 60周期の場合にも0.12秒以内にする必要があるが, これは容易ではない.
 
-この例からわかるように, $g$を精密に測るためには周期をもっと精度よく測定する必要がある,
+この例からわかるように, $g$を精密に測るためには周期をもっと精度よく測定する必要がある.
 
 
 \subsection{より精密な周期測定}
@@ -78,7 +78,7 @@
   T=T_0\pm\frac{T_0^2}{\tau\mp T_0}
 \end{equation}
 複号は振り子の周期$T$が$T_0$よりも長いときは上を, 短いときは下をとる.
-今回の実験では$T$が$T_*0$より長いため以下の式になる
+今回の実験では$T$が$T_*0$より長いため以下の式になる.
 \begin{equation}
   \label{eq:T-from-tau}
   T=T_0+\frac{T_0^2}{\tau-T_0}
@@ -187,7 +187,7 @@
   \caption{ボルダの振り子による重力加速度の測定結果}
   \begin{tabular}{ccc}
     \hline
-    & 周期\,$\tau/\mathrm{s}$ & 重力加速度\,$g/\mathrm{ms^{-2}}$\\
+    & 周期\,$T/\mathrm{s}$ & 重力加速度\,$g/\mathrm{ms^{-2}}$\\
     \hline
     1 & 2.0487 & 9.8116 \\
     2 & 2.0442 & 9.7983 \\
@@ -200,9 +200,73 @@
   \label{tb:experiment-result}
 \end{table}
 
-よって本実験では, ボルダの振り子を用いて, 電気通信大学における重力加速度の値を$9.8215\,g/\mathrm{ms^{-2}}$と測定した.
+よって本実験では, ボルダの振り子を用いて, 電気通信大学における重力加速度の値を$9.8215\,\mathrm{m/s^2}$と測定した.
 
 
 \section{考察}
+
+
+\subsection{実験結果の分析}
+
+本実験では, 振り子の長さを4通り変えて実験を行ったが, 求めた重力加速度の4通りの値のなかで4つ目の値のみが他の値と大きく異なっている.
+本実験では重力加速度$g$に対する不確かさ$\Delta g$を計算する際に必要な数値を実験中に求めなかったため, 4つ目の値を平均処理から除外できない.
+そこで, 以下のテキストに記載されている値および式を用いて重力加速度の不確かさ$\Delta g$を求める. ただし, $\Delta h'$に関しては実測値のばらつきから, $\Delta h'=0.2\,\mathrm{mm}$とする.
+
+\begin{itemize}
+  \item $\Delta\tau=1\,\mathrm{s}$
+  \item $\Delta h'=0.2\,\mathrm{mm}$
+  \item $\Delta d=0.05\,\mathrm{mm}$
+  \item $g=10\,\mathrm{m/s^2}$
+  \item $h=1\,\mathrm{m}$
+  \item $T=2\,\mathrm{s}$
+\end{itemize}
+
+\begin{equation}
+  \frac{\Delta g}{g}=\sqrt{\left(\frac{\Delta h}{h}\right)^2+\left(\frac{2\Delta T}{T}\right)^2}
+\end{equation}
+
+\begin{equation}
+  \bar{g}=\frac{
+    \frac{g_1}{(\Delta g_1)^2} + \frac{g_2}{(\Delta g_2)^2}+\cdots+\frac{g_n}{(\Delta g_n)^2}
+  }{
+    \frac{1}{(\Delta g_1)^2} + \frac{2}{(\Delta g_2)^2}+\cdots+\frac{1}{(\Delta g_n)^2}
+  }
+\end{equation}
+
+\begin{table}[H]
+  \centering
+  \caption{重力加速度の不確かさ}
+  \begin{tabular}{ccc}
+    \hline
+    & $g/\mathrm{ms^{-2}}$ & $\Delta g/\mathrm{ms^{-2}}$ \\
+    \hline
+    1 & 9.8116 & $\pm 0.0060$ \\
+    2 & 9.7983 & $\pm 0.0051$ \\
+    3 & 9.8067 & $\pm 0.0033$ \\
+    4 & 9.8694 & $\pm 0.0021$ \\
+    \hline
+  \end{tabular}
+\end{table}
+
+これより,4つ目の値では重大な測定ミスがあったと思われる. そのため, 4つ目の値を除外し平均処理を行うと, $\bar{g}=9.8055\,\mathrm{m/s^2}$と求められる. これは過去電気通信大学にて原子干渉計を用いた高度な重力加速度計による$g=9.7969\,\mathrm{m/s^2}$に近い値である.
+
+
+\subsection{課題(1)}
+
+重力加速度は, 緯度が高いほど大きくなる.
+そのため日本国内において重力加速度の値が最も大きな所は日本最北端の択捉島であり,もっとも小さな所は日本最南端の沖ノ鳥島である.
+
+
+\subsection{課題(3)}
+
+本実験における吊り線の質量$m$は, ピアノ線の密度を$7.85\,\mathrm{g/cm^3}$とすると, $m=0.2466\,\mathrm{g}$であり, これは鋼球の質量に対して極わずかであるため, 厳密には考慮するべきだが今回の実験においては考慮する必要はない.
+
+
+\subsection{課題(4)}
+
+\begin{description}
+  \item[\textcircled{\scriptsize 1}] $g$
+\end{description}
+
 
 \end{document}
