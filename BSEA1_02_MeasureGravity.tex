@@ -1,5 +1,8 @@
 \documentclass{jarticle}
 
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{float}
+
 \title{重力加速度の測定}
 \author{2511198 肥田幸久}
 \date{2025年5月4日}
@@ -7,12 +10,12 @@
 \begin{document}
 \maketitle
 
-\section{目的}
+\section{実験の目的}
 
 本実験では, ボルダの振り子を用いて精密に測定した振り子の周期から, 電気通信大学における重力加速度の値を4桁の精度で測定する.
 
 
-\section{原理}
+\section{実験の原理}
 
 \subsection{重力加速度}
 
@@ -102,6 +105,13 @@
 ナイフエッジを水平な金属板の上に乗せて金属球を振動させる.
 この装置は, ボルダの振り子と呼ばれている.
 
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=60mm]{experimental_method_picture.png}
+  \caption{振り子の実験装置}
+  \end{center}
+\end{figure}
+
 正確に2秒ごとに発光するLEDフラッシュランプの光パルス（時間間隔の不確かさは$1$\textmu s以内, 発光時間は約$10$\textmu s）で振り子を照射する.
 光パルスに照らされて光るピアノ線を望遠鏡で観察し, 白く光るピアノ線が左右に往復する周期$\tau$を測定する.
 
@@ -110,17 +120,42 @@
 
 \begin{table}[h]
   \centering
-  \caption{$h'=1049.9\,\mathrm{mm}$}
-  \label{tab:long-table}
-  \begin{tabular}{cc}
-      \hline
-      回数 & 周期$\tau/\mathrm{s}$ \\
-      \hline
-      1 & 92.60 \\
-      2 & 90.00 \\
-      3 & 90.00 \\
-      \hline
-  \end{tabular}
+  \begin{minipage}{0.3\textwidth}
+    \caption{$h'=1049.9\,\mathrm{mm}$}
+    \begin{tabular}{cc}
+        \hline
+        回数 & 周期$\tau/\mathrm{s}$ \\
+        \hline
+        1 & 92.60 \\
+        2 & 91.80 \\
+        3 & 92.81 \\
+        \hline
+    \end{tabular}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \caption{$h'=1039.4\,\mathrm{mm}$}
+    \begin{tabular}{cc}
+        \hline
+        回数 & 周期$\tau/\mathrm{s}$ \\
+        \hline
+        1 & 122.20 \\
+        2 & 124.01 \\
+        3 & 121.96 \\
+        \hline
+    \end{tabular}
+  \end{minipage}
+  \begin{minipage}{0.3\textwidth}
+    \caption{$h'=1029.2\,\mathrm{mm}$}
+    \begin{tabular}{cc}
+        \hline
+        回数 & 周期$\tau/\mathrm{s}$ \\
+        \hline
+        1 & 244.17 \\
+        2 & 241.98 \\
+        3 & 243.89 \\
+        \hline
+    \end{tabular}
+  \end{minipage}
 \end{table}
 
 \section{考察}
