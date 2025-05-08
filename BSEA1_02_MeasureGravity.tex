@@ -17,6 +17,7 @@
 
 \section{実験の原理}
 
+
 \subsection{重力加速度}
 
 地球を球形と仮定し, 質量を$M$, 半径を$R$, 万有引力定数を$G$とすると, 地球上の質量$m$の物体に働く重力の大きさ$mg$は
@@ -40,25 +41,29 @@
 を得る.
 したがって重力加速度のおおよその大きさは$g=9.8\,\mathrm{m/s^2}$である.
 
+
 \subsection{振り子の周期と重力加速度}
 
 単振り子の振動の周期は重力加速度と関係している. 振り子の長さを$h$とすると, その周期$T$は
 \begin{equation}
+  \label{equ:T-from-G}
   T=2\pi\sqrt{\frac{h}{g}}
 \end{equation}
 で表される.
 この式は, 振り子のおもりと振動の振幅が小さい場合の近似式であるが, この式を使えば振り子の周期$T$を測ることで重力加速度$g$は
 \begin{equation}
+  \label{equ:G-from-T-1}
   g=\frac{4\pi^2h}{T^2}
 \end{equation}
 と求めることができる.
 
 しかし, この式で重力加速度の値を4桁の精度で求めることは難しい.
 仮に振り子の長さを$h=1\,\mathrm{m}$とすると, 周期は約2秒となる.
-式(5)中の$h$を4桁の精度で求めるためには, 振り子の長さを不確かさ$1\,\mathrm{mm}$以内で測る必要があるが, これは容易である.
-それに対して, 式(5)中の$T^2$を4桁の精度で求めるためには, 30周期をストップウォッチで測る場合には時間測定の不確かさを0.06秒以内, 60周期の場合にも0.12秒以内にする必要があるが, これは容易ではない.
+式(\ref{equ:G-from-T-1})中の$h$を4桁の精度で求めるためには, 振り子の長さを不確かさ$1\,\mathrm{mm}$以内で測る必要があるが, これは容易である.
+それに対して, 式(\ref{equ:G-from-T-1})中の$T^2$を4桁の精度で求めるためには, 30周期をストップウォッチで測る場合には時間測定の不確かさを0.06秒以内, 60周期の場合にも0.12秒以内にする必要があるが, これは容易ではない.
 
 この例からわかるように, $g$を精密に測るためには周期をもっと精度よく測定する必要がある,
+
 
 \subsection{より精密な周期測定}
 
@@ -75,12 +80,14 @@
 複号は振り子の周期$T$が$T_0$よりも長いときは上を, 短いときは下をとる.
 今回の実験では$T$が$T_*0$より長いため以下の式になる
 \begin{equation}
+  \label{eq:T-from-tau}
   T=T_0+\frac{T_0^2}{\tau-T_0}
 \end{equation}
 
+
 \subsection{より精密な重力加速度の計算}
 
-前述したとおり, 式(4)は次の仮定のもとに導かれたものである.
+前述したとおり, 式(\ref{equ:T-from-G})は次の仮定のもとに導かれたものである.
 \begin{itemize}
   \item おもりの大きさが無視できる
   \item 振動の振幅が十分に小さい
@@ -93,6 +100,7 @@
 \end{equation}
 これより$g$は
 \begin{equation}
+  \label{eq:G-from-T-2}
   g=\frac{4\pi^2h}{T^2}\left(1+\frac{2r^2}{5h^2}\right)\left(1+\frac{\theta^2}{8}+\frac{\theta^4}{256}\right)
 \end{equation}
 と求めることができる.
@@ -101,8 +109,8 @@
 \section{実験方法}
 
 この実験では以下のような装置を用いて測定を行った.
-金属球を太さ$0.2\,\mathrm{mm}$のピアノ線で吊るし, ピアノ線の上部をナイフエッジの付いた金具に固定する.
-ナイフエッジを水平な金属板の上に乗せて金属球を振動させる.
+直径$d$の鋼球を太さ$0.2\,\mathrm{mm}$のピアノ線で吊るし, ピアノ線の上部をナイフエッジの付いた金具に固定する.
+ナイフエッジを水平な金属板の上に乗せて鋼球を振動させる.
 この装置は, ボルダの振り子と呼ばれている.
 
 \begin{figure}[H]
@@ -118,45 +126,82 @@
 
 \section{実験結果}
 
+今回の実験では, 振り子の長さを4通り変えて実験を行った.
+以下に, 今回の実験を通して変化しない初期値(表\ref{tb:initial-value-1}), それぞれの測定ごとに変化する初期値(表\ref{tb:initial-value-2}), および光るピアノ線の周期の測定結果(表\ref{tb:measure-result})を示す.
+
 \begin{table}[h]
   \centering
-  \begin{minipage}{0.3\textwidth}
-    \caption{$h'=1049.9\,\mathrm{mm}$}
-    \begin{tabular}{cc}
-        \hline
-        回数 & 周期$\tau/\mathrm{s}$ \\
-        \hline
-        1 & 92.60 \\
-        2 & 91.80 \\
-        3 & 92.81 \\
-        \hline
-    \end{tabular}
-  \end{minipage}
-  \begin{minipage}{0.3\textwidth}
-    \caption{$h'=1039.4\,\mathrm{mm}$}
-    \begin{tabular}{cc}
-        \hline
-        回数 & 周期$\tau/\mathrm{s}$ \\
-        \hline
-        1 & 122.20 \\
-        2 & 124.01 \\
-        3 & 121.96 \\
-        \hline
-    \end{tabular}
-  \end{minipage}
-  \begin{minipage}{0.3\textwidth}
-    \caption{$h'=1029.2\,\mathrm{mm}$}
-    \begin{tabular}{cc}
-        \hline
-        回数 & 周期$\tau/\mathrm{s}$ \\
-        \hline
-        1 & 244.17 \\
-        2 & 241.98 \\
-        3 & 243.89 \\
-        \hline
-    \end{tabular}
-  \end{minipage}
+  \caption{実験の初期値}
+  \begin{tabular}{ccc}
+    \hline
+    & $d/\mathrm{mm}$ & $l/\mathrm{mm}$\\
+    \hline
+    & $25.5$ & $886.5$ \\
+    & $25.4$ & $880.5$ \\
+    & $25.5$ & $881.5$ \\
+    \hline
+    平均 & 25.5 & 882.8 \\
+    \hline
+  \end{tabular}
+  \label{tb:initial-value-1}
 \end{table}
+
+\begin{table}[h]
+  \centering
+  \caption{測定ごとの初期値}
+  \begin{tabular}{cc|cc}
+    \hline
+    & $h/\mathrm{mm}$ & & $\alpha/\mathrm{mm}$ \\
+    \hline
+    $h_1$ & 1043.1 & $\alpha_1$ & 2.05 \\
+    $h_2$ & 1037.1 & $\alpha_2$ & 13.3 \\
+    $h_3$ & 1026.7 & $\alpha_3$ & 19.4 \\
+    $h_4$ & 1016.5 & $\alpha_4$ & 18.0 \\
+    \hline
+  \end{tabular}
+  \label{tb:initial-value-2}
+\end{table}
+
+\begin{table}[h]
+  \centering
+  \caption{光るピアノ線の周期の測定結果}
+  \begin{tabular}{ccccc}
+    \hline
+     & \multicolumn{3}{c}{周期\,$\tau/\mathrm{s}$} \\
+    回数 & $h_1,\alpha_1$ & $h_2,\alpha_2$ & $h_3,\alpha_3$ & $h_4,\alpha_4$ \\
+    \hline
+    1 & 84.02 & 92.60 & 122.20 & 244.17 \\
+    2 & 83.86 & 91.80 & 124.01 & 241.98 \\
+    3 & 84.32 & 92.81 & 121.96 & 243.89 \\
+    \hline
+    平均 & 84.07 & 92.40 & 122.72 & 243.35 \\
+    \hline
+  \end{tabular}
+  \label{tb:measure-result}
+\end{table}
+
+表\ref{tb:measure-result}の平均値より, 式(\ref{eq:T-from-tau})を用いて振り子の周期$T$を求め, 次にここで求めた周期$T$より, 式(\ref{eq:G-from-T-2})を用いて重力加速度$g$を求める. これらの計算結果とその平均値, すなわち実験結果を以下の表\ref{tb:experiment-result}に示す. 
+
+\begin{table}[H]
+  \centering
+  \caption{ボルダの振り子による重力加速度の測定結果}
+  \begin{tabular}{ccc}
+    \hline
+    & 周期\,$\tau/\mathrm{s}$ & 重力加速度\,$g/\mathrm{ms^{-2}}$\\
+    \hline
+    1 & 2.0487 & 9.8116 \\
+    2 & 2.0442 & 9.7983 \\
+    3 & 2.0331 & 9.8067 \\
+    4 & 2.0166 & 9.8694 \\
+    \hline
+    平均 & & 9.8215 \\
+    \hline
+  \end{tabular}
+  \label{tb:experiment-result}
+\end{table}
+
+よって本実験では, ボルダの振り子を用いて, 電気通信大学における重力加速度の値を$9.8215\,g/\mathrm{ms^{-2}}$と測定した.
+
 
 \section{考察}
 
