@@ -224,14 +224,18 @@
 本実験では重力加速度$g$に対する不確かさ$\Delta g$を計算する際に必要な数値を実験中に求めなかったため, 4つ目の値を平均処理から除外できない.
 そこで, 以下のテキストに記載されている値および式を用いて重力加速度の不確かさ$\Delta g$を求める. ただし, $\Delta h'$に関しては実測値のばらつきから, $\Delta h'=0.2\,\mathrm{mm}$とする.
 
-\begin{itemize}
-  \item $\Delta\tau=1\,\mathrm{s}$
-  \item $\Delta h'=0.2\,\mathrm{mm}$
-  \item $\Delta d=0.05\,\mathrm{mm}$
-  \item $g=10\,\mathrm{m/s^2}$
-  \item $h=1\,\mathrm{m}$
-  \item $T=2\,\mathrm{s}$
-\end{itemize}
+\begin{table}[h]
+  \centering
+  \caption{$\Delta g$を計算する際に必要な数値}
+  \begin{tabular}{cccccc}
+    \hline
+    $\Delta\tau/\mathrm{s}$ & $\Delta h'/\mathrm{mm}$ & $\Delta d/\mathrm{mm}$ & $g/\mathrm{ms^{-2}}$ & $h/\mathrm{m}$ & $T/\mathrm{s}$ \\
+    \hline
+    1 & 0.2 & 0.05 & 10 & 1 & 2 \\
+    \hline
+  \end{tabular}
+\end{table}
+
 
 \begin{equation}
   \frac{\Delta g}{g}=\sqrt{\left(\frac{\Delta h}{h}\right)^2+\left(\frac{2\Delta T}{T}\right)^2}
@@ -260,54 +264,7 @@
   \end{tabular}
 \end{table}
 
-これより,4つ目の値では重大な測定ミスがあったと思われる. そのため, 4つ目の値を除外し平均処理を行うと, $\bar{g}=9.8055\,\mathrm{m/s^2}$と求められる. これは過去電気通信大学にて原子干渉計を用いた高度な重力加速度計による$g=9.7969\,\mathrm{m/s^2}$に近い値である.[2]
-
-
-\subsection{課題(1)}
-
-重力加速度は, 緯度が高いほど大きくなる.
-そのため日本国内において重力加速度の値が最も大きな所は日本最北端の択捉島であり,もっとも小さな所は日本最南端の沖ノ鳥島である.
-
-
-\subsection{課題(3)}
-
-本実験における吊り線の質量$m$は, ピアノ線の密度を$7.85\,\mathrm{g/cm^3}$とすると[3], $m=0.2466\,\mathrm{g}$であり, これは鋼球の質量に対して極わずかであるため, 厳密には考慮するべきだが今回の実験においては考慮する必要はない.
-
-
-\subsection{課題(4)}
-
-
-\subsubsection{\textcircled{\scriptsize 1}}
-
-$g=9.5106\times10^{-6}\,\mathrm{m/s^2}$
-
-この数値は, 今回の実験の精度をはるかに下回っている.
-
-
-\subsubsection{\textcircled{\scriptsize 2}}
-
-\begin{table}[H]
-  \centering
-  \caption{高層ビルにおける重力加速度の差}
-  \begin{tabular}{cc}
-    \hline
-    & $g/\mathrm{ms^{-2}}$ \\
-    \hline
-    1階 & 9.798 \\
-    最上階($l=300\,\mathrm{m}$) & 9.797 \\
-    \hline
-    差 & 0.001 \\
-    \hline
-  \end{tabular}
-\end{table}
-
-標高を$300\,\mathrm{m}$の変化が無い限り, 標高は今回の実験の精度には影響を及ぼさない.
-
-
-\subsubsection{\textcircled{\scriptsize 3}}
-
-東に速度$10\,\mathrm{m/s}$で運動している乗り物内での重力加速度の減少量は, \\
-$\Delta g=1.114\times10^{-3}\,\mathrm{m/s^2}$である. これは今回の実験の精度に確実に影響を及ぼす.
+これより, 4つ目の値では重大な測定ミスがあったと思われる. そのため, 4つ目の値を除外し平均処理を行うと, $\bar{g}=9.8055\,\mathrm{m/s^2}$と求められる. これは過去電気通信大学にて原子干渉計を用いた高度な重力加速度計による$g=9.7969\,\mathrm{m/s^2}$に近い値である.[2]
 
 
 \section{参考文献}
