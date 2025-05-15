@@ -204,11 +204,11 @@
 \begin{table}[h]
   \centering
   \caption{ボルダの振り子による重力加速度の測定結果}
-  \begin{tabular}{ccc}
+  \begin{tabular}{cccc}
     \hline
-    & 測定値 & 文献値 \\
+    & 測定値 & 文献値\cite{uec-atom} & 誤差 \\
     \hline
-    $g/\mathrm{ms^{-2}}$ & 9.8215 & 9.7969 \\
+    $g/\mathrm{ms^{-2}}$ & 9.8215 & 9.7969 & 0.0246 \\
     \hline
   \end{tabular}
 \end{table}
@@ -271,10 +271,28 @@
   \end{tabular}
 \end{table}
 
-これより, 4つ目の値では重大な測定ミスがあったと思われる.
-そのため, 4つ目の値を除外し平均処理を行うと, $\bar{g}=9.8055\,\mathrm{m/s^2}$と求められる.
+\begin{figure}[H]
+  \begin{center}
+  \includegraphics[width=100mm]{uncertainty_graph.png}
+  \caption{不確かさの範囲の重なり}
+  \end{center}
+\end{figure}
+
+これより, 4回目の測定では重大なミスがあったと思われる.
+そのため, 4つ目の値を除外し平均処理を行うと, $\bar{g}'=9.8055\,\mathrm{m/s^2}$と求められる.
 これは過去電気通信大学にて原子干渉計を用いた高度な重力加速度計による$g=9.7969\,\mathrm{m/s^2}$に近い値である.\cite{uec-atom}
 
+\begin{table}[h]
+  \centering
+  \caption{4回目の測定値を除外した重力加速度}
+  \begin{tabular}{cccc}
+    \hline
+    & 測定値 & 文献値\cite{uec-atom} & 誤差 \\
+    \hline
+    $g/\mathrm{ms^{-2}}$ & 9.8055 & 9.7969 & 0.0086 \\
+    \hline
+  \end{tabular}
+\end{table}
 
 \begin{thebibliography}{99}
 
